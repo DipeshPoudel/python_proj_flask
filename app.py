@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
 subjects = ['Python','Database','Data Science','Java']
 
 @app.route("/")
@@ -11,3 +10,7 @@ def index():
 @app.route("/about")
 def about():
     return 'I am Dipesh. Welcome to my Class'
+
+@app.route("/contact")
+def contact():
+    return "Mobile: 985232255"
