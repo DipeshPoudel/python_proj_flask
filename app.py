@@ -13,4 +13,4 @@ def about():
 
 @app.route("/contact")
 def contact():
-    return "Mobile: 985232255"
+    return render_template('contact.html')
