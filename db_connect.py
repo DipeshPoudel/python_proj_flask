@@ -1,12 +1,17 @@
 import mariadb
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 db_config = {
-    'host': 'localhost',
+    'host': os.getenv('DB_HOST'),
     'port': 3306,
-    'user': 'test1',
-    'password': 'pass1',
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
     'database': 'broadwaydb'
 }
+
 
 def get_connection():
     try:
